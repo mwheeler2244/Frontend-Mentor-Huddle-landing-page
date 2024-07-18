@@ -1,0 +1,259 @@
+:root {
+  /* ### Primary */
+
+  --Pink: hsl(322, 100%, 66%);
+
+  /* ### Neutral */
+
+  --Very-Pale-Cyan: hsl(193, 100%, 96%);
+  --Very-DarkCyan-title: hsl(192, 100%, 9%);
+  --Grayish-Blue: hsl(208, 11%, 55%);
+  --fw-light: 400;
+  --fw-med: 600;
+  --fw-heavy: 700;
+  --padding-sm: 1rem;
+  --padding-med: 2rem;
+  --padding-big: 3rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  font-size: 1.125rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.home {
+  background-image: url(./images/bg-hero-mobile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: var(--Very-Pale-Cyan);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-sm);
+}
+
+.logo__nav img {
+  width: 100px;
+}
+
+.btn__nav {
+  color: var(--Very-DarkCyan-title);
+  font-weight: var(--fw-med);
+  background-color: white;
+  border: transparent;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  box-shadow: 0.5px 0.5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-block: 3rem;
+}
+
+.home__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  color: var(--Very-DarkCyan-title);
+}
+
+.btn__main {
+  background-color: var(--Pink);
+  border-radius: 20px;
+  border: transparent;
+  color: white;
+  padding: 1rem;
+  width: 250px;
+  font-weight: var(--fw-heavy);
+  margin-inline: auto;
+}
+.about {
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  color: var(--Very-DarkCyan-title);
+  padding: var(--padding-big) var(--padding-med);
+  border-radius: 12px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.card p {
+  font-size: 0.85rem;
+  color: var(--Grayish-Blue);
+  padding-block: var(--padding-sm);
+}
+.bottom__text {
+  background-color: white;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 12px;
+  min-width: 350px;
+  padding-block: 2.5rem;
+
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.bottom__text h2 {
+  text-align: center;
+  padding-bottom: 1.5rem;
+
+  color: var(--Very-DarkCyan-title);
+}
+
+footer {
+  margin-top: 150px;
+
+  position: relative;
+  background-color: var(--Very-DarkCyan-title);
+}
+
+.bottom__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  color: white;
+  padding-top: 1rem;
+}
+.bottom__nav img {
+  filter: invert(1) sepia(1);
+  width: 175px;
+  padding-top: 6.5rem;
+}
+.contact__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 0.5rem;
+}
+.contact__text-inside {
+  display: flex;
+  gap: 2rem;
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.social__icons {
+  margin-inline: auto;
+}
+.fa-brands {
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  border: 0.125px solid white;
+  padding: 0.5rem;
+  background-color: transparent;
+}
+
+@media (min-width: 700px) {
+  nav {
+    padding: 2rem 4rem;
+  }
+  .logo__nav img {
+    width: 200px;
+  }
+  .btn__nav {
+    padding: 1rem 3.5rem;
+  }
+  .home {
+    flex-direction: row;
+    align-items: center;
+    background-image: url(./images/bg-hero-desktop.svg);
+    gap: 2rem;
+  }
+  .home__text {
+    text-align: left;
+    flex: 1;
+  }
+  .home__text h1 {
+    font-size: 2.5rem;
+    font-weight: var(--fw-light);
+  }
+  picture {
+    flex: 1.5;
+  }
+  .card {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .top,
+  .bottom {
+    flex-direction: row-reverse;
+  }
+  .card__text {
+    text-align: left;
+    padding-inline: 5rem;
+  }
+  .bottom__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 0.875rem;
+  }
+  .bottom__nav img {
+    filter: invert(1) sepia(1);
+    width: 200px;
+    max-width: 100%;
+    margin-right: auto;
+  }
+  .contact__text.right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .bottom__text {
+    width: 900px;
+    top: -20%;
+  }
+  .bottom__text h2 {
+    font-size: 2rem;
+  }
+  .contact__text.left {
+    grid-column: 1 / 2;
+  }
+  .socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+  }
+}
